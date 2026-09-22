@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | HobbyNest</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="register-page">
+
+    <div class="register-container">
+
+        <h1>📝 Register</h1>
+
+        <form id="registerForm">
+
+            <input type="text"
+                   placeholder="Enter Username"
+                   required>
+
+            <input type="email"
+                   placeholder="Enter Email"
+                   required>
+
+            <input type="password"
+                   placeholder="Enter Password"
+                   required>
+
+            <input type="password"
+                   placeholder="Confirm Password"
+                   required>
+
+            <button type="submit">
+                Register
+            </button>
+
+        </form>
+
+        <br>
+
+        <p>
+            Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+
+        <br>
+
+        <a href="index.html">🏠 Back to Home</a>
+
+    </div>
+
+    <script>
+    document.getElementById("registerForm").addEventListener("submit", async function(e) {
+        e.preventDefault();
+
+        const username = document.querySelector('input[type="text"]').value;
+        const email = document.querySelector('input[type="email"]').value;
+        const password = document.querySelectorAll('input[type="password"]')[0].value;
+        const confirmPassword = document.querySelectorAll('input[type="password"]')[1].value;
+
+        if(password !== confirmPassword){
+            alert("Passwords do not match!");
+            return;
+        }
+
+        const response = await fetch("http://localhost:3000/register",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+                username,
+                email,
+                password
+            })
+        });
+
+        const result = await response.text();
+        alert(result);
+    });
+    </script>
+
+</body>
+</html>

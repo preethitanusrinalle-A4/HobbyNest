@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - HobbyNest</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <h2>HobbyNest</h2>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="upload.html">Upload</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="gallery">
+
+    <div class="gallery-card">
+        <img src="images/butterfly.jpeg" alt="Butterfly" onclick="openLightbox(this.src)">
+        <h3>🦋 Butterfly</h3>
+        <button class="like-btn" onclick="likeImage(this)">❤️ Like</button>
+        <p class="like-count">0 Likes</p>
+    </div>
+
+    <div class="gallery-card">
+        <img src="images/lemon.jpeg" alt="Lemon" onclick="openLightbox(this.src)">
+        <h3>🍋 Lemon</h3>
+        <button class="like-btn" onclick="likeImage(this)">❤️ Like</button>
+        <p class="like-count">0 Likes</p>
+    </div>
+
+    <div class="gallery-card">
+        <img src="images/rabbit.jpeg" alt="Rabbit" onclick="openLightbox(this.src)">
+        <h3>🐇 Rabbit</h3>
+        <button class="like-btn" onclick="likeImage(this)">❤️ Like</button>
+        <p class="like-count">0 Likes</p>
+    </div>
+
+    <div class="gallery-card">
+        <img src="images/siva.jpeg" alt="Lord Shiva" onclick="openLightbox(this.src)">
+        <h3>🕉️ Lord Shiva</h3>
+        <button class="like-btn" onclick="likeImage(this)">❤️ Like</button>
+        <p class="like-count">0 Likes</p>
+    </div>
+
+    <div class="gallery-card">
+        <img src="images/sunflower.jpeg" alt="Sunflower" onclick="openLightbox(this.src)">
+        <h3>🌻 Sunflower</h3>
+        <button class="like-btn" onclick="likeImage(this)">❤️ Like</button>
+        <p class="like-count">0 Likes</p>
+    </div>
+
+    <div class="gallery-card">
+        <img src="images/pencilart.jpeg" alt="Pencil Art" onclick="openLightbox(this.src)">
+        <h3>✏️ Pencil Art</h3>
+        <button class="like-btn" onclick="likeImage(this)">❤️ Like</button>
+        <p class="like-count">0 Likes</p>
+    </div>
+
+    <div class="gallery-card">
+        <img src="images/painting.jpeg" alt="Painting" onclick="openLightbox(this.src)">
+        <h3>🎨 Painting</h3>
+        <button class="like-btn" onclick="likeImage(this)">❤️ Like</button>
+        <p class="like-count">0 Likes</p>
+    </div>
+
+</section>
+
+<div style="text-align:center; margin:30px;">
+    <a href="index.html">
+        <button style="padding:12px 25px; border:none; border-radius:30px; background:#ff6b6b; color:white; font-size:16px; cursor:pointer;">
+            🏠 Back to Home
+        </button>
+    </a>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="">
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
